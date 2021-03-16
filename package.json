@@ -1,0 +1,37 @@
+{
+  "name": "as-uri-encode-decode",
+  "version": "1.0.0",
+  "description": "AssemblyScript pollyfill for decodeURIComponent and encodeURIComponent",
+  "types": "assembly/index.ts",
+  "scripts": {
+    "asbuild:untouched": "asc assembly/index.ts -b build/untouched.wasm -t build/untouched.wat --sourceMap --debug",
+    "asbuild:optimized": "asc assembly/index.ts -b build/optimized.wasm -t build/optimized.wat --sourceMap --optimize",
+    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/williamoverton/as-uri-encode-decode.git"
+  },
+  "keywords": [
+    "assemblyscript",
+    "uri",
+    "uridecode",
+    "urldecode",
+    "decode",
+    "encode",
+    "url",
+    "querystring",
+    "decodeURIComponent",
+    "encodeURIComponent"
+  ],
+  "author": "William Overton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/williamoverton/as-uri-encode-decode/issues"
+  },
+  "homepage": "https://github.com/williamoverton/as-uri-encode-decode#readme",
+  "devDependencies": {
+    "assemblyscript": "^0.18.14",
+    "typescript": "^4.2.3"
+  }
+}
