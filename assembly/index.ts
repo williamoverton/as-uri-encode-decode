@@ -30,7 +30,7 @@ export function encodeURIComponent(input: string): string {
         if(isSafe(c)){
             result += c
         }else{
-            result += "%" + c.charCodeAt(0).toString(16)
+            result += "%" + c.charCodeAt(0).toString(16).toUpperCase()
         }
     }
 

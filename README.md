@@ -1,7 +1,9 @@
 # as-uri-encode-decode
 
 Since decodeURIComponent and encodeURIComponent are not available yet: https://github.com/AssemblyScript/assemblyscript/wiki/Status-and-Roadmap#globals
-This module provides those functions written in AssemblyScript
+This module provides those functions written in AssemblyScript. 
+
+This implementation works for ISO-8859-1 but doesnt always deal with multi byte utf-8 decoding well, e.g. `£` which is `%C2%A3` in utf8, this would become `A£` in ISO-8859-1.
 
 ```
 import {decodeURIComponent, encodeURIComponent} from "./urlencoder"
